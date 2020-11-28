@@ -42,5 +42,9 @@ public class Main {
 		System.out.println(texto.toUpperCase());//imprimir variable.toUpperCase() me permite convertir todo el texto de una variable en mayúscula
 		System.out.println(texto.toLowerCase());//imprimir variable.toLowerCase() me permite convertir todo el texto de una variable en minúscula
 
+		int cantidadCaracteres = texto.length();
+		System.out.println("La cantidad de caracteres es: " + cantidadCaracteres);
+		
+		
 	}
 }
