@@ -8,7 +8,12 @@ import java.io.InputStreamReader;
 
 public class Main {
 	/*
-	 * Leer desde el teclado concat() toUpperCase() toLowerCase() lenght() Convertir variables numericas a String y viceversa
+	 * - Leer desde el teclado 
+	 * - concat()
+	 * - toUpperCase()
+	 * - toLowerCase()
+	 * - lenght()
+	 * - Convertir variables numericas a String y viceversa
 	 */
 	public static void main(String[] args) {
 
@@ -24,10 +29,14 @@ public class Main {
 
 			texto = buffer.readLine();// Este método lee el dato del teclado, lo captura y lo almacena en la variable
 
-		} catch (IOException e) {//Sé que el try catch me permite controlar errores, pero me queda la duda de como se utiliza correctamente.
+		} catch (IOException e) {// Sé que el try catch me permite controlar errores, pero me queda la duda de como se utiliza correctamente.
 		}
 
 		System.out.println("Este es el texto que se almacenó en la variable: " + texto);
+		
+		texto = texto.concat(" -esto es una concatenación, con el metodo concat(string);");
+		
+		System.out.println(texto);
 
 	}
 }
