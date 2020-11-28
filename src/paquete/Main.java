@@ -13,25 +13,23 @@ public class Main {
 	public static void main(String[] args) {
 
 		String texto = "";
-		int x = 0;
+		double x = 50.3;
 
-		InputStreamReader in = new InputStreamReader(System.in);// Se abre un flujo o Canal de datos que se reciben desde el exterior
-		BufferedReader buffer = new BufferedReader(in);// Espacio de memoria que almacena datos del canal
+		texto = String.valueOf(x);
 
-		// System.out.println("prueba");
-
-		try {
-			System.out.println("Ingrese el texto que quiere almacenar en memoria:");
-
-			texto = buffer.readLine();// Este método lee el dato del teclado, lo captura y lo almacena en la variable
-			x = Integer.parseInt(texto);
-
-		} catch (Exception e) {// En caso de que se genere error mostrará la información del Catch
-			System.out.println("Debes escribir un número");
-
-		}
-		
-		System.out.println(x + 5);
+		/*
+		 * InputStreamReader in = new InputStreamReader(System.in);// Se abre un flujo o Canal de datos que se reciben desde el exterior BufferedReader buffer
+		 * = new BufferedReader(in);// Espacio de memoria que almacena datos del canal
+		 * 
+		 * try { System.out.println("Ingrese el texto que quiere almacenar en memoria:");
+		 * 
+		 * texto = buffer.readLine();// Este método lee el dato del teclado, lo captura y lo almacena en la variable x = Integer.parseInt(texto);
+		 * 
+		 * } catch (Exception e) {// En caso de que se genere error mostrará la información del Catch System.out.println("Debes escribir un número");
+		 * 
+		 * }
+		 */
+		System.out.println(texto);
 
 	}
 }
