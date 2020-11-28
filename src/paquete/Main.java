@@ -34,9 +34,13 @@ public class Main {
 
 		System.out.println("Este es el texto que se almacenó en la variable: " + texto);
 		
-		texto = texto.concat(" -esto es una concatenación, con el metodo concat(string);");
+		texto = texto.concat(" -esto es una concatenación, con el método concat(string);");
 		
-		System.out.println(texto);
+		System.out.println(texto);//imprimir concatenado
+		
+		
+		System.out.println(texto.toUpperCase());//imprimir variable.toUpperCase() me permite convertir todo el texto de una variable en mayúscula
+		System.out.println(texto.toLowerCase());//imprimir variable.toLowerCase() me permite convertir todo el texto de una variable en minúscula
 
 	}
 }
