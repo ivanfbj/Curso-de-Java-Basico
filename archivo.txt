@@ -1,0 +1,3 @@
+Esto es un archivo de texto
+Sera utilizado en el curso de JAVA básico
+Curso de código facilito
