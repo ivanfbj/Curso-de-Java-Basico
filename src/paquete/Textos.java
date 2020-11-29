@@ -12,8 +12,18 @@ public class Textos {
 			FileReader r = new FileReader(nombreArchivo);
 			BufferedReader buffer = new BufferedReader(r);
 
-			System.out.println(buffer.readLine());
+			// System.out.println(buffer.readLine());
 
+			String temp = "";
+
+			while (temp != null) {
+				temp = buffer.readLine();
+				if (temp == null) {
+					break;
+				}
+
+				System.out.println(temp);
+			}
 
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
