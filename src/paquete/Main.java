@@ -1,30 +1,24 @@
 package paquete;
 
-import java.util.LinkedList;
-
 public class Main {
-
-
-	/*Métodos a utilizar
-	 * offer: añadir un dato
-	 * poll: obtener un dato
-	 * */
-	
-	//Cola = FIFO // first in , first out
 	
 	public static void main(String[] args) {
-		LinkedList cola = new LinkedList();
-
-		// llenar Cola
-		for (int i = 1; i <= 10; i++) {
-			cola.offer(i);
+		
+		int arreglo[]= {5,3,4,2,1,9,8,7,21,254,78,56,32,14,58,78,9541,6,10,11,12,13};
+		/*
+		 * 5,3,4,2
+		 * 3,4,2,5
+		 * 3,2,4,5
+		 * 2,3,4,5
+		 * */
+		
+		Ordenar o = new Ordenar();
+		o.ordenarBurbuja(arreglo);
+		
+		
+		for (int i = 0; i < arreglo.length; i++) {
+			System.out.println(arreglo[i]);
 		}
-
-		// Imprimir
-		while (cola.peek() != null) {
-			System.out.println("" + cola.poll());
-			;
-		}
-
+		
 	}
 }
