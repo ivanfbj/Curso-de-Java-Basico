@@ -1,30 +1,29 @@
 package paquete;
 
-import java.util.Stack;
+import java.util.LinkedList;
 
 public class Main {
 
 
-	/*
-	 * push: insertar un dato en la pila
-	 * pop: retirar el ultimo dato ingresado
-	 * peek: para ver el ultimo dato de la pila
-	 * empty: para saber si hay o no datos en la pila
+	/*Métodos a utilizar
+	 * offer: añadir un dato
+	 * poll: obtener un dato
 	 * */
 	
-	//Pial = FILO fisrt-in , last-out
+	//Cola = FIFO // first in , first out
 	
 	public static void main(String[] args) {
+		LinkedList cola = new LinkedList();
 
-		Stack pila = new Stack();
-		pila.push(50); // indice de 0
-		pila.push("Ivan"); // indice 1
-		pila.push(27);
-		pila.push("fernando");
-		System.out.println("El ultimo elemento en la pila es: " + pila.peek());
+		// llenar Cola
+		for (int i = 1; i <= 10; i++) {
+			cola.offer(i);
+		}
 
-		while (pila.empty() == false) {
-			System.out.println(pila.pop());
+		// Imprimir
+		while (cola.peek() != null) {
+			System.out.println("" + cola.poll());
+			;
 		}
 
 	}
