@@ -1,0 +1,2 @@
+Texto de prueba en la escritura desde JAVA
+Probando salto de linea en la escritura

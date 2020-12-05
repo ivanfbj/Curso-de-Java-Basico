@@ -1,6 +1,0 @@
-Esto es un archivo de texto
-Sera utilizado en el curso de JAVA básico
-Curso de código facilito
-4 lineas
-5 lineas
-6 lineas
