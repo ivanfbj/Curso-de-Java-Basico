@@ -12,21 +12,21 @@ public class ConexionSql {
 	private static final String USER_DB = "root";
 	private static final String PASS_DB = "1037626026";
 
-	
-	//Para evitar cargar el controlador cada vez que se intancie el objeto y se llame al metodo "conectar"
-	//Deberemos colocar el Class.form que se encarga de llamar al controlador, dentro de un bloque STATIC
-	//Esto es debido a que no necesitamos estar cargando el controlador cada vez que llamemos al método "conectar"-
-	//Esta carga del controlador lo podemos hacer la primera vez que ejecutemos toda la aplicación, cuando la aplicación independiente que llamemos o no el método "conectar"
-	
+	// Para evitar cargar el controlador cada vez que se intancie el objeto y se llame al metodo "conectar"
+	// Deberemos colocar el Class.form que se encarga de llamar al controlador, dentro de un bloque STATIC
+	// Esto es debido a que no necesitamos estar cargando el controlador cada vez que llamemos al método "conectar"-
+	// Esta carga del controlador lo podemos hacer la primera vez que ejecutemos toda la aplicación, cuando la aplicación independiente que llamemos o no
+	// el método "conectar"
+
 	static {
 		try {
 			Class.forName(CONTROLADOR);
 		} catch (ClassNotFoundException e) {
 			System.out.println("Error al cargar el controlador");
-			e.printStackTrace();// Comando opcional
+			e.printStackTrace();// Rastreo de pila, en caso de que suceda un error para saber cual fue el origen del error
 		}
 	}
-	
+
 	// Con este metodo se vuelva la clase más reutilizable
 	public Connection conectar() {
 
@@ -34,11 +34,11 @@ public class ConexionSql {
 
 		try {
 			// Class.forName("com.mysql.jdbc.Driver");
-			
-			/*Se mueve este gragmento del código al bloque Static*/
-			//Class.forName(CONTROLADOR);//Se carga el controlador que me permite conectarme a la base de datos de MySql
 
-			conexion = DriverManager.getConnection(URL_DB, USER_DB, PASS_DB);//Se establece la conexión con la base de datos, usuario y clave
+			/* Se mueve este gragmento del código al bloque Static */
+			// Class.forName(CONTROLADOR);//Se carga el controlador que me permite conectarme a la base de datos de MySql
+
+			conexion = DriverManager.getConnection(URL_DB, USER_DB, PASS_DB);// Se establece la conexión con la base de datos, usuario y clave
 
 			System.out.println("Conexión OK");
 
