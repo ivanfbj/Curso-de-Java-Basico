@@ -49,6 +49,17 @@ public class TestConexionASql {
 			preparedStmt3.close();
 			
 			
+			PreparedStatement preparedStmt4 = cn.prepareStatement("INSERT INTO usuario (usuario, clave) VALUES (?,?)");
+			String nomObject="Meliodas";
+			String clavObject="7777777";
+			
+			preparedStmt4.setString(1, nomObject);
+			preparedStmt4.setString(2, clavObject);
+			
+			preparedStmt4.execute();
+			preparedStmt4.close();
+			
+			
 			//stm.executeQuery("select * from usuario");//El resultado de este query tengo que asignarlo a un objeto de la clase ResultSet
 			rs = stm.executeQuery("select * from usuario");
 			
