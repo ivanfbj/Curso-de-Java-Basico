@@ -1,6 +1,7 @@
 package pruebaConexionBaseDeDatos;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -33,6 +34,21 @@ public class TestConexionASql {
 		try {
 			cn = conexionDataBase.conectar();
 			stm = cn.createStatement();
+			
+			String queryInsert = "INSERT INTO usuario (usuario, clave) VALUES ('King', '1597-4')";
+			PreparedStatement preparedStmt = cn.prepareStatement(queryInsert);
+			preparedStmt.execute();
+			preparedStmt.close();
+			
+			PreparedStatement preparedStmt2 = cn.prepareStatement("DELETE FROM usuario where idusuario=30");
+			preparedStmt2.execute();
+			preparedStmt2.close();
+			
+			PreparedStatement preparedStmt3 = cn.prepareStatement("UPDATE usuario SET clave='111' where idusuario=27");
+			preparedStmt3.execute();
+			preparedStmt3.close();
+			
+			
 			//stm.executeQuery("select * from usuario");//El resultado de este query tengo que asignarlo a un objeto de la clase ResultSet
 			rs = stm.executeQuery("select * from usuario");
 			
